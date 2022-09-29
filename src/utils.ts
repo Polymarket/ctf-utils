@@ -1,4 +1,4 @@
-import BN from "bn.js";
+import { BN } from "bn.js";
 import { ethers } from "ethers";
 import { keccak256 } from "@ethersproject/solidity";
 
@@ -22,8 +22,8 @@ const calculateCollectionIds = (conditionId: string, outcomeSlotCount: number) :
         const odd = "89abcdef".includes(initHash[2]);
         const x = new BN(initHash.slice(2), "hex").toRed(altBN128PRed);
 
-        let y;
-        let yy;
+        let y: any ;
+        let yy: any;
         do {
             x.redIAdd(onePRed);
             yy = x.redSqr();
