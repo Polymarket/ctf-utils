@@ -1,7 +1,7 @@
 {
     "name": "@polymarket/ctf-utils",
     "description": "Utilities for handling CTF ERC1155 positions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "contributors": [
         {
             "name": "Jonathan Amenechi",
