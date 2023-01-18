@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { keccak256 } from "@ethersproject/solidity";
 
 
-const calculateCollectionIds = (conditionId: string, outcomeSlotCount: number) : string[] => {
+export const calculateCollectionIds = (conditionId: string, outcomeSlotCount: number) : string[] => {
     const collectionIds: string[] = [];
     const altBN128P = new BN(
         "21888242871839275222246405745257275088696311157297823662689037894645226208583",
@@ -64,4 +64,13 @@ export const calculatePositionIds = (
         );
         return new BN(positionId.replace("0x", ""), "hex").toString();
     });
+}
+
+export const calculatePositionId = (
+    conditionId: string,
+    collateral: string,
+    outcomeSlotCount: number,
+    outcomeIndex: number
+) : string => {
+    return calculatePositionIds(conditionId, collateral, outcomeSlotCount)[outcomeIndex];
 }
