@@ -59,7 +59,6 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
-        "test": "ts-mocha 'test/**/*.test.ts' --recursive --timeout 60000 --exit",
-        "publish": "yarn build && npm publish"
+        "test": "ts-mocha 'test/**/*.test.ts' --recursive --timeout 60000 --exit"
     }
 }
